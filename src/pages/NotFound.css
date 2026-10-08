@@ -1,0 +1,82 @@
+/* ============================================================
+   404 Not Found Page
+   ============================================================ */
+
+.notfound-page {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.nf-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.nf-orb-1 {
+  width: 500px;
+  height: 500px;
+  background: rgba(108, 99, 255, 0.12);
+  top: -150px;
+  left: -150px;
+}
+
+.nf-orb-2 {
+  width: 400px;
+  height: 400px;
+  background: rgba(168, 85, 247, 0.1);
+  bottom: -100px;
+  right: -100px;
+}
+
+.nf-content {
+  position: relative;
+  z-index: 1;
+  max-width: 500px;
+}
+
+.nf-code {
+  font-size: clamp(6rem, 15vw, 10rem);
+  font-weight: 900;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.nf-emoji {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.nf-title {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.nf-desc {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 36px;
+  font-family: var(--font-secondary);
+}
+
+.nf-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}

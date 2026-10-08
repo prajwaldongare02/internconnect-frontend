@@ -1,0 +1,272 @@
+/* ============================================================
+   Application Status Page Styles
+   ============================================================ */
+
+.appstatus-page {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  padding: 48px 0 80px;
+}
+
+/* Header */
+.appstatus-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.appstatus-title {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.appstatus-sub {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Summary Cards */
+.appstatus-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.appstatus-summary-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.appstatus-summary-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+}
+
+.appstatus-summary-card.active {
+  border-color: var(--primary);
+  background: rgba(108, 99, 255, 0.1);
+  box-shadow: 0 0 0 2px rgba(108,99,255,0.2);
+}
+
+.summary-icon { font-size: 1.5rem; }
+.summary-count {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+.summary-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Tabs */
+.appstatus-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.appstatus-tab {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  padding: 8px 20px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-secondary);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.appstatus-tab:hover {
+  border-color: var(--primary);
+  color: var(--primary-light);
+}
+
+.appstatus-tab.active {
+  background: var(--gradient-primary);
+  border-color: transparent;
+  color: white;
+  font-weight: 700;
+}
+
+/* List */
+.appstatus-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Application Card */
+.appstatus-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  transition: var(--transition);
+}
+
+.appstatus-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-card);
+  transform: translateY(-2px);
+}
+
+.appstatus-card-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  flex: 1;
+  min-width: 0;
+}
+
+.appstatus-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: white;
+  flex-shrink: 0;
+  font-family: var(--font-primary);
+}
+
+.appstatus-info { flex: 1; min-width: 0; }
+
+.appstatus-job-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.appstatus-company {
+  color: var(--primary-light);
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.appstatus-meta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-family: var(--font-secondary);
+}
+
+.appstatus-card-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  flex-shrink: 0;
+  min-width: 180px;
+  text-align: right;
+}
+
+.appstatus-status-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  font-family: var(--font-secondary);
+  max-width: 200px;
+}
+
+.appstatus-withdraw-btn {
+  padding: 8px 16px !important;
+  font-size: 0.8rem !important;
+}
+
+/* Empty State */
+.appstatus-empty {
+  text-align: center;
+  padding: 80px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.appstatus-empty-icon { font-size: 3.5rem; }
+.appstatus-empty h3 { font-size: 1.2rem; }
+.appstatus-empty p { color: var(--text-muted); font-family: var(--font-secondary); }
+
+/* Modal (shared styles from detail page reused here) */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.modal-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 36px;
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.modal-header { display: flex; justify-content: space-between; align-items: center; }
+.modal-title { font-size: 1.3rem; font-weight: 700; }
+.modal-close {
+  background: transparent; border: none; color: var(--text-muted);
+  font-size: 1.2rem; cursor: pointer; padding: 4px 8px; border-radius: var(--radius);
+}
+.modal-actions { display: flex; gap: 12px; justify-content: flex-end; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .appstatus-summary { grid-template-columns: repeat(2, 1fr); }
+  .appstatus-card {
+    flex-direction: column;
+  }
+  .appstatus-card-right {
+    align-items: flex-start;
+    text-align: left;
+    min-width: unset;
+  }
+}
+
+
+.appstatus-resume-btn {
+  text-decoration: none;
+  padding: 8px 14px !important;
+  font-size: 0.8rem !important;
+}

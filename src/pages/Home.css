@@ -1,0 +1,22 @@
+.simple-home { min-height: calc(100vh - 72px); background: var(--bg-primary); }
+.simple-home-container { max-width: 1050px; margin: 0 auto; padding: 0 24px; }
+.simple-hero { padding: 90px 0 80px; border-bottom: 1px solid var(--border); }
+.simple-home-logo { width: 68px; height: 68px; object-fit: contain; margin-bottom: 24px; }
+.simple-kicker { color: var(--primary-light); font-size: .82rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 16px; }
+.simple-hero h1 { max-width: 760px; font-size: clamp(2.4rem, 6vw, 4.4rem); line-height: 1.08; margin-bottom: 22px; }
+.simple-hero-text { max-width: 700px; font-size: 1.08rem; color: var(--text-secondary); line-height: 1.75; }
+.simple-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
+.simple-primary-btn, .simple-secondary-btn { display:inline-flex; align-items:center; justify-content:center; padding:12px 20px; border-radius:8px; font-weight:700; }
+.simple-primary-btn { background:var(--primary); color:#fff; }
+.simple-primary-btn:hover { color:#fff; background:var(--primary-dark); }
+.simple-secondary-btn { border:1px solid var(--border-hover); color:var(--text-primary); background:transparent; }
+.simple-secondary-btn:hover { color:var(--text-primary); background:var(--bg-secondary); }
+.simple-workflow { padding:70px 0 90px; }
+.simple-workflow h2 { font-size:1.8rem; margin-bottom:30px; }
+.simple-workflow-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--border); border:1px solid var(--border); }
+.simple-workflow-grid > div { background:var(--bg-secondary); padding:28px 24px; min-height:190px; }
+.simple-workflow-grid span { color:var(--primary-light); font-weight:700; font-size:.8rem; }
+.simple-workflow-grid h3 { margin:14px 0 8px; font-size:1.05rem; }
+.simple-workflow-grid p { font-size:.9rem; line-height:1.6; }
+@media (max-width:800px){ .simple-workflow-grid{grid-template-columns:repeat(2,1fr);} }
+@media (max-width:520px){ .simple-hero{padding:60px 0;} .simple-workflow-grid{grid-template-columns:1fr;} .simple-actions{flex-direction:column;} .simple-primary-btn,.simple-secondary-btn{width:100%;} }
